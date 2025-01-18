@@ -22,22 +22,36 @@
 - Масштабируемость: Ограничена, так как монолит сложно масштабировать по частям.
 - Развёртывание: Требует остановки всего приложения.
 
-### 3. Определение доменов и границы контекстов
-
-- Домен: Управление устройствами 
-
-- Домен: Кабинет самообслуживания 
-   - поддомен управления сценариями
-   - поддомен контроля телеметрии
-   - поддомен выбора и подключения модулей умного дома (устройств)
+### 3. Определение доменов и границы контекстов (To-Be)
 
 - Домен: Управление отоплением
+
+- Домен: Мониторинг телеметрии
 
 - Домен: Управление освещением
 
 - Домен: Управление автоматическими воротами
 
-- Домен: Видео-наблюдение за домом
+- Домен: Видеонаблюдение за домом
+
+- Домен: Личный кабинет пользователя 
+   - поддомен управления расписаниями
+      - контекст: планирование расписания
+      - контекст: публикация расписания
+   - поддомен контроля телеметрии
+   - поддомен выбора и подключения модулей умного дома (устройств)
+   - поддомен управления оплатой
+
+- Домен: продажа услуг
+   - поддомен управления услугами
+   - поддомен управления пользователями
+   - поддомен управления платежами
+      - контекст: обработка транзакций
+      - контекст: ведение журнала транзакций
+
+- Домен: Управление устройствами 
+   - поддомен отслеживания устройств
+   - поддомен отчётности и аналитики
 
 ### **4. Проблемы монолитного решения**
 
@@ -52,18 +66,18 @@
 
 ### 5. Визуализация контекста системы — диаграмма С4
 
-![Диаграмма контекста в модели C4](System_context.png)
+![Диаграмма контекста в модели C4 (As-Is)](System_context.png)
 
 [Используем PlantUML Web Server](https://www.plantuml.com/plantuml/uml/7Cmn3i8m38NXlQU0ZQN9miG4wWfI5sRafXQrv3YHxOZhqtHwqYzzxsuEwYtpS2P9t5OyRUxLRZ4g_CANV6jBCzHKn54yf99ZPP1kHlELQOdJTPnxUh-UCOCvwfu-qow013NK_Z_Cg5RaKezvC87zwwPwdGI2CDZp51igJEuXZ3-DfSIQHZgrWG8xmA356OdM9aGjRIx8XSE3kuGdcE-DdBaSXFMWkjtzvcTs5W9NnmGPKdl6dDyf8XiYHeh4rJLyupB23B4WzcYXuoR3KjZwKQrvJw_RHgVuR1JNt_YqL-IaX5YKX7LQw7qWiO4iA14vOkJzO4yqYMqeR8GLLYJ63fahaJc7VKKZjC-93OJadiG4lmeJECwaJBxsICaib6paC2rJa3CAA4nSBaNXR2nhQbBgXvH8kKirOZ8ij58rMF9uGomD4XjlUsYTzxgDTg_RzEh0LrMfwEAT9pCAikozkaLEOlBDaRe8_9idWLCZGZ16xR9zqxhodwEQPx8jlLHrcEjoAbdLxMtTGhytUaTUPs8UgeUn_5zTvryY6LDiYKnD7GYmyumnmoX2QY-xrqZK9ISMLcT-byf5vukparFcEsxVNVCVyWS0)
 
 
 # Задание 2. Проектирование микросервисной архитектуры
 
-В этом задании вам нужно предоставить только диаграммы в модели C4. Мы не просим вас отдельно описывать получившиеся микросервисы и то, как вы определили взаимодействия между компонентами To-Be системы. Если вы правильно подготовите диаграммы C4, они и так это покажут.
-
 **Диаграмма контейнеров (Containers)**
 
-Добавьте диаграмму.
+![Диаграмма контейнеров в модели C4 (To-Be)](Containers.png)
+
+[Используем PlantUML Web Server](https://www.plantuml.com/plantuml/uml/dLZFJnj75BxxhvZwP2GJBZtb54AgaXOgYadR6rhC55QnTwtTTL8KHGBQf4gfWe8gLMghegJggHTmSBFym4Zv2sR_etxlpPXXcCKbd7PdvxtlVUzxRtxOTz8iIB9kkrNvA8oQhUwox2OjiPfbdVJsn4GIFBwr4cQhtQLkAfDc76Koocuru_R4VDWCakNuYr1sP6jYwkFnkLOGPGzcPoRQGPh919yMf-9s9ux8eqC1AdCoIUEerk77P2iCqhgegbqrKCV5p-eTdZsrLsogFer5bIPtrB7QKmVwK_6ys18O3DG9sLR7Aeqrn6hNKdwS8xvMUR51EB3R4-__KM-AL-eC25lgqFY_FnQrXNZyhXoh-Xwm9KhV5pyYTh_OX0zUJjKf0FgYsC2OU68wLqV4f2vWJFvaXJ58zxLzyKoedea9dsTreGQmEolMOGkxOfi201DGR-6oHomD6cm6wf3UI1TrWi_MaGA0z3P4g4oXBa4OoMJnRjoDbeDahJOTes0FK3FAxfUXOaPCTbNzwjWJ8-3Y9zzbjMaPP66qeh-Gsry-2Sr-084i0JPrC-9eVMkS3uiA5psXzZ6vZeGETDM7Z2uIMf1jj4gGTHFPa54QSovl28WZz8cSOK0vsehaWkdaEWW5S87lnN5YqzpHHbGzHjgrhYY5hpdnxraVCCbT-9bmPJMp-AzX3QxNnIusj3tLpCNzAboMyKNUETTom6sp3tbVsjh2jwIlUwKkjfEUblQIkxhynGIQuacb8iIvR-rhkJJPwS0QBm9lBUmMMHX7HEgpu55G5urEWcOpQxolziTDoOu1-A_jK0Vry-3RXm4yPcMQ1YjIB2NnGvaG1iyms2ik-14KN2Sf1zHgnGi3U7W9S7Bk_gT19Xy7Qt2rWweUDUv_Ozx4SC9rRuIPf9Y_gnoTTweLEM9bSyGpHP-NGJDpLebJRdm0ppCg5AQu4jHITK92dSmAf0sHwkZsFflr49SxId3Zm_W0hYWjE0sZ-1jAlNGt4MPjxt7_aLoKiDyIPgz0KkQDzX8XBjYoIKCcZyAcv4waYY0KqhmjofHmjXQdYNSkfwEJzh-MAtO2I8gDd203rXsoygdU2x9WAKYbJKaCFn69kJZDLh0FVJd3bFvczgTMDXm8TiFtjpqpuUzAGZozGk85sP9jcINKckVlvJBFnb6OnRIUVAN_84c82GNbjdnRsaYKLganTHGtzJkpInzwnvydw3bVgwhDuTgwghwZgnTsf7oqnzDsnKzFDZrzHNjUSyydjpynEgAUmfDRa5IoNnmtekjpi0ffgZTMnmOQgGiVJW3ZfwUBdlumNGRcn7hXBzlH2zU7sBpUal48Mn5rNZSLqKkcs1uf9f_80EMd9wQUlafCF4UStqJLMc3B_WbFh4A-Eka1Rp8zKNwKbp6nAcd2DrLf97Mh6DqcvcNBlUuFZypVBktKAY_jBdlRvvwQNbYOQm2VSHdg_AAXTeTtTkT0eU5Gg05T24XBZ8jjDihzgtmvZz8RUVan3JrmYoUvw4G7Mo8xvAclC62BAD2DeYB-SzBD-H50L4fFQ8EdSOIR_e6vHb2V40nK1OaVUEsSc30lMHR4ihr8iIxHj7SXSFqL38W7IRU5V5rdo60gubodtEEVuLq3PmSkC-2LFCg0ctYKWNisiWdREDnOIPhpfvnxWUDjKLq0VzOx2YsGLS3duSxno0Um2ha0_XoFV02he0lWp_7e_nWuFtn6u6YJ4RaQWwkh0cbT4F_7OcdvxyXecVwA-0y0)
 
 **Диаграмма компонентов (Components)**
 
