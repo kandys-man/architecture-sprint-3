@@ -87,7 +87,9 @@
 
 **Диаграмма кода (Code)**
 
-Добавьте одну диаграмму или несколько.
+![Диаграмма кода в модели C4](Code.png)
+
+[Используем PlantUML Web Server](https://www.plantuml.com/plantuml/uml/TP1DIYj158NdjOfw6Rr7I7hoHXb8OcSGmHynxLZAhfkai7wQgbkH88Aw4t438WG2QhA5oewi9X8xFquQpdVwddlgjXqoYrv9yaVeN7eEtaewGYnSAqaiksqE1OxyjNTWSwCHD3Ppev8BaJFBpQc00cII_c-SIwRnykGuKSmXs8YkKgCAeyk9ebn0KA04MWlFORfy26zXjdniqV0I5b6zHlqUfk4ppCAKXldoASp3uWU5ZneXkMJEqHum57hOdpW4rGSx5ZdGEqBhtqOQQreZ9LZQooBEG882j9EAaQNaVYkluiOmMXyRmIbwgy_qtt-RO32e4CPv5yeE5UOBpX1sC0S95RnkK6cusQ7B46WPLOfCAA0OFwMGHWzZNfbqnDSBZ5w57rfWDt73Dk_aACQmONGaioe3LO1bw6tLT82hiJv6owqQaxtdRpGETk_uww_x7apQeBbNyWi0)
 
 # Задание 3. Разработка ER-диаграммы
 
